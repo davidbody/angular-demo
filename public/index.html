@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mathApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS Demo</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="MainCtrl">
+
+  <h2>AngularJS Demo</h2>
+  <div>
+    <form>
+      <p><label>N1</label><input ng-model="n1" required/></p>
+      <p><label>N2</label><input ng-model="n2" required/></p>
+      <button ng-click="calculate()">Calculate</button>
+    </form>
+  </div>
+
+  <div id="result">
+    <h3>Result: {{ result }}</h3>
+  </div>
+
+  <div ng-if="errors">
+    <h3>Errors:</h3>
+    <div class="error">
+      <ul>
+        <li ng-repeat="(field, messages) in errors">{{ field }}:
+          <ul>
+            <li ng-repeat="message in messages">{{ message }}</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="vendor/angular.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
