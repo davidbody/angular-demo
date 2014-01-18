@@ -10,12 +10,7 @@ mathApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.result = '';
       $scope.errors = '';
 
-      params = {
-        n1: $scope.n1,
-        n2: $scope.n2
-      };
-
-      $http.get('/add', {params: params}).
+      $http.get('/add', {params: $scope.params}).
         success(function(data, status, headers, config) {
           $scope.result = data.result;
         }).
