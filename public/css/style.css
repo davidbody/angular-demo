@@ -28,3 +28,7 @@ div#result {
 div#result h3 {
   margin: 0.3em 0em;
 }
+
+input.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty {
+  border: 2px solid red;
+}
