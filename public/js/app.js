@@ -10,7 +10,7 @@ mathApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.result = '';
       $scope.errors = '';
 
-      $http.get('/add', {params: $scope.params}).
+      $http.get('/calculate', {params: $scope.params}).
         success(function(data, status, headers, config) {
           $scope.result = data.result;
         }).
@@ -22,4 +22,7 @@ mathApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
           }
         });
     };
+
+  $scope.operations = ['+', '-', '*', '/'];
+
   }]);

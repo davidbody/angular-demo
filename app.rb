@@ -9,10 +9,10 @@ class MathService < Sinatra::Base
     send_file File.join(settings.public_folder, 'index.html')
   end
 
-  get '/add/?' do
+  get '/calculate/?' do
     math_params = MathParams.new(params)
     if math_params.valid?
-      result = MathEngine.add(math_params)
+      result = MathEngine.calculate(math_params)
       json result: result
     else
       status 400
