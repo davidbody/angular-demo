@@ -11,28 +11,33 @@
   <h2>AngularJS Demo</h2>
   <div>
     <form ng-submit="calculate()">
-      <p><label>N1</label><input type="text" ng-model="params.n1" required/></p>
-      <p><label>N2</label><input type="text" ng-model="params.n2" required/></p>
-      <p><label>Operation</label><select ng-model="params.op" ng-options="op for op in operations track by op" required></select></p>
-      <p><input type="submit" value="Calculate"></p>
+      <p>
+        <label>N1</label>
+        <input type="text" ng-model="params.n1" required autofocus/>
+        <form-errors errors="errors.n1"/>
+      </p>
+      <p>
+        <label>N2</label>
+        <input type="text" ng-model="params.n2" required/>
+        <form-errors errors="errors.n2"/>
+      </p>
+      <p>
+        <label>Operation</label>
+        <select ng-model="params.op" ng-options="op for op in operations track by op" required></select>
+        <form-errors errors="errors.op"/>
+      </p>
+      <p>
+        <input type="submit" value="Calculate">
+      </p>
     </form>
+  </div>
+
+  <div>
+    <h2>{{ params.n1 }} {{ params.op }} {{ params.n2 }}</h2>
   </div>
 
   <div id="result">
     <h3>Result: {{ result }}</h3>
-  </div>
-
-  <div ng-if="errors">
-    <h3>Errors:</h3>
-    <div class="error">
-      <ul>
-        <li ng-repeat="(field, messages) in errors">{{ field }}:
-          <ul>
-            <li ng-repeat="message in messages">{{ message }}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
   </div>
 
   <script src="vendor/angular.js"></script>

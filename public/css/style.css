@@ -4,6 +4,7 @@ html, body {
 
 .error {
   color: red;
+  padding-left: 0.5em;
 }
 
 label {

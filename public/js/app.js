@@ -40,3 +40,13 @@ mathApp.controller('CalculationController', ['$scope', '$http', function($scope,
   $scope.operations = ['+', '-', '*', '/'];
 
 }]);
+
+mathApp.directive('formErrors', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      errors: '='
+    },
+    template: "<span class=\"error\" ng-cloak ng-repeat=\"error in errors\">{{ error }}{{ $last ? '' : ';' }}</span>"
+  };
+});
