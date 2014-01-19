@@ -4,6 +4,9 @@ var mathApp = angular.module('mathApp', []);
 
 mathApp.controller('CalculationController', ['$scope', '$http', function($scope, $http) {
   $scope.params = {
+    n1: 0,
+    n2: 0,
+    op: '+'
   };
 
   $scope.$watch('params.n1', function(newValue, oldValue) {
