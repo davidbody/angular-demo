@@ -13,10 +13,6 @@ label {
   font-weight: bold;
 }
 
-select {
-  width: 20em;
-}
-
 div#result {
   margin-top: 1em;
   border: 3px solid #3cbd26;
