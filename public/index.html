@@ -10,11 +10,11 @@
 
   <h2>AngularJS Demo</h2>
   <div>
-    <form>
-      <p><label>N1</label><input ng-model="params.n1" required/></p>
-      <p><label>N2</label><input ng-model="params.n2" required/></p>
+    <form ng-submit="calculate()">
+      <p><label>N1</label><input type="text" ng-model="params.n1" required/></p>
+      <p><label>N2</label><input type="text" ng-model="params.n2" required/></p>
       <p><label>Operation</label><select ng-model="params.op" ng-options="op for op in operations track by op" required></select></p>
-      <button ng-click="calculate()">Calculate</button>
+      <p><input type="submit" value="Calculate"></p>
     </form>
   </div>
 
