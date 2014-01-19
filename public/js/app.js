@@ -2,7 +2,7 @@
 
 var mathApp = angular.module('mathApp', []);
 
-mathApp.controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
+mathApp.controller('CalculationController', ['$scope', '$http', function($scope, $http) {
   $scope.params = {
   };
 
