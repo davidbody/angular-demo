@@ -10,7 +10,7 @@
 
   <h2>AngularJS Demo</h2>
   <div>
-    <form ng-submit="calculate()">
+    <form name="mathForm" ng-submit="calculate()">
       <p>
         <label>N1</label>
         <input type="number" ng-model="params.n1" required autofocus/>
@@ -27,7 +27,7 @@
         <form-errors errors="errors.op"/>
       </p>
       <p>
-        <input type="submit" value="Calculate">
+        <input type="submit" value="Calculate" ng-disabled="mathForm.$invalid">
       </p>
     </form>
   </div>
