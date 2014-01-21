@@ -26,6 +26,9 @@
         <select ng-model="params.op" ng-options="op for op in operations track by op" required></select>
         <active-model-errors errors="errors.op"/>
       </p>
+      <p ng-show="errors.exception">
+        <active-model-errors errors="errors.exception"/>
+      </p>
       <p>
         <input type="submit" value="Calculate" ng-disabled="mathForm.$invalid">
       </p>
