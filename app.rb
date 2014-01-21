@@ -9,7 +9,7 @@ class MathService < Sinatra::Base
     send_file File.join(settings.public_folder, 'index.html')
   end
 
-  get '/calculate/?' do
+  get '/api/calculate/?' do
     math_params = MathParams.new(params)
     if math_params.valid?
       result = MathEngine.calculate(math_params)

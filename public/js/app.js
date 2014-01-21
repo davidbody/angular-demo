@@ -25,7 +25,7 @@ mathApp.controller('CalculationController', ['$scope', '$http', function($scope,
     $scope.result = '';
     $scope.errors = '';
 
-    $http.get('/calculate', {params: $scope.params}).
+    $http.get('/api/calculate', {params: $scope.params}).
       success(function(data, status, headers, config) {
         $scope.result = data.result;
       }).
