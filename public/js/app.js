@@ -1,6 +1,6 @@
 'use strict';
 
-var mathApp = angular.module('mathApp', []);
+var mathApp = angular.module('MathApp', []);
 
 mathApp.controller('CalculationController', ['$scope', '$http', function($scope, $http) {
   $scope.params = {
@@ -22,8 +22,6 @@ mathApp.controller('CalculationController', ['$scope', '$http', function($scope,
   });
 
   $scope.calculate = function() {
-    var params;
-
     $scope.result = '';
     $scope.errors = '';
 
@@ -44,7 +42,7 @@ mathApp.controller('CalculationController', ['$scope', '$http', function($scope,
 
 }]);
 
-mathApp.directive('formErrors', function() {
+mathApp.directive('activeModelErrors', function() {
   return {
     restrict: 'E',
     scope: {

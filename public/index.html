@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="mathApp">
+<html lang="en" ng-app="MathApp">
 <head>
 <meta charset="utf-8">
 <title>AngularJS Demo</title>
@@ -14,17 +14,17 @@
       <p>
         <label>N1</label>
         <input type="number" ng-model="params.n1" required autofocus/>
-        <form-errors errors="errors.n1"/>
+        <active-model-errors errors="errors.n1"/>
       </p>
       <p>
         <label>N2</label>
         <input type="number" ng-model="params.n2" required/>
-        <form-errors errors="errors.n2"/>
+        <active-model-errors errors="errors.n2"/>
       </p>
       <p>
         <label>Operation</label>
         <select ng-model="params.op" ng-options="op for op in operations track by op" required></select>
-        <form-errors errors="errors.op"/>
+        <active-model-errors errors="errors.op"/>
       </p>
       <p>
         <input type="submit" value="Calculate" ng-disabled="mathForm.$invalid">
